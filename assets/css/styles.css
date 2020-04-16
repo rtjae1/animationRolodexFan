@@ -1,0 +1,13 @@
+:root {
+  --jazz1: #2a7e90;
+  --jazz2: #165120;
+  --jazz3: #031138;
+  --jazz4: #013c40;
+}
+
+.content {
+  position: absolute;
+  top: calc(50%);
+  left: calc(50%);
+  transform: translate(-50%, -50%);
+}

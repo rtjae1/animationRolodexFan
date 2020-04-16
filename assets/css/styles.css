@@ -5,9 +5,140 @@
   --jazz4: #013c40;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  min-height: 100vh;
+  /* background: radial-gradient(#bdbebe, #0380bb); */
+  background: radial-gradient(#165120 -50%, #2a7e90);
+}
+
 .content {
   position: absolute;
-  top: calc(50%);
-  left: calc(50%);
+  top: calc(50% - 175px);
+  left: calc(50% - 50px);
   transform: translate(-50%, -50%);
+  width: 200px;
+  height: 350px;
+  transform-style: preserve-3d;
+  transform: perspective(1000px) rotateY(310deg);
+}
+
+.content div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: animate 10s linear infinite;
+}
+
+.content div span {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid var(--jazz2);
+  border-right: 2px solid var(--jazz2);
+  border-left: 2px solid var(--jazz2);
+  box-sizing: border-box;
+}
+
+.content div span:nth-child(1) {
+  transform: rotateX(0deg);
+}
+
+.content div span:nth-child(2) {
+  transform: rotateX(11.5deg);
+}
+
+.content div span:nth-child(3) {
+  transform: rotateX(22.5deg);
+}
+
+.content div span:nth-child(4) {
+  transform: rotateX(33.75deg);
+}
+
+.content div span:nth-child(5) {
+  transform: rotateX(45deg);
+}
+
+.content div span:nth-child(6) {
+  transform: rotateX(56.25deg);
+}
+
+.content div span:nth-child(7) {
+  transform: rotateX(67.5deg);
+}
+
+.content div span:nth-child(8) {
+  transform: rotateX(78.75deg);
+}
+
+.content div span:nth-child(9) {
+  transform: rotateX(90deg);
+}
+
+.content div span:nth-child(10) {
+  transform: rotateX(101.25deg);
+}
+
+.content div span:nth-child(11) {
+  transform: rotateX(112.5deg);
+}
+
+.content div span:nth-child(12) {
+  transform: rotateX(123.75deg);
+}
+
+.content div span:nth-child(13) {
+  transform: rotateX(135deg);
+}
+
+.content div span:nth-child(14) {
+  transform: rotateX(146.25deg);
+}
+
+.content div span:nth-child(15) {
+  transform: rotateX(157.5deg);
+}
+
+.content div span:nth-child(16) {
+  transform: rotateX(168.75deg);
+}
+
+.content div span::before,
+.content div span::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  border: 1px solid var(--jazz3);
+  box-sizing: border-box;
+  background: radial-gradient(#165120 -50%, #2a7e90);
+}
+
+.content div span::before {
+  top: 0;
+  left: 0;
+}
+
+.content div span::after {
+  bottom: 0;
+  left: 0;
+}
+
+@keyframes animate {
+  0% {
+    transform: perspective(1000px) rotateX(0deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotateX(359deg);
+  }
 }
